@@ -52,6 +52,8 @@ class _HomescreenState extends State<Homescreen> {
         weather = "";
         windSpeed = 0;
         pressure = 0;
+        humidity = 0;
+        cloud = 0;
       });
     }
   }
