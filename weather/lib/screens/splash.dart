@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:weather/screens/homescreen.dart';
 import 'dart:async';
 
@@ -23,11 +24,17 @@ class _SplashState extends State<Splash> {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-              image: AssetImage('assets/img.png'), fit: BoxFit.cover),
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('TempTrack',
+                style: GoogleFonts.poppins(
+                    fontSize: 24, fontWeight: FontWeight.w700)),
+            const SizedBox(height: 20),
+            const CircularProgressIndicator(),
+          ],
         ),
       ),
     );
